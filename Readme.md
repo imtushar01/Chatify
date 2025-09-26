@@ -47,15 +47,11 @@ ARCJET_KEY=your_arcjet_key
 ARCJET_ENV=development
 
 ## ▶️ Run Backend
-```bash
 cd backend
 npm install
 npm run dev
 
----
 ## Run frontend
----
-
 cd frontend
 npm install
 npm run dev
