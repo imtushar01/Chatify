@@ -23,7 +23,7 @@ function ContactList() {
           <div className="flex items-center gap-3">
             <div>
               <div className="size-12 rounded-full">
-                <img src={"/avatar.png"} alt="" />
+                <img src={contact.profilePic || "/avatar.png"} alt="" />
               </div>
             </div>
             <h4 className="text-slate-200 font-medium">{contact.fullName}</h4>
