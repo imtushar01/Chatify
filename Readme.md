@@ -4,6 +4,7 @@
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Highlights
@@ -45,9 +46,13 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ARCJET_KEY=your_arcjet_key
 ARCJET_ENV=development
 
+---
+
 cd backend
 npm install
 npm run dev
+
+---
 
 cd frontend
 npm install
