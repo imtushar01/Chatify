@@ -46,10 +46,8 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ARCJET_KEY=your_arcjet_key
 ARCJET_ENV=development
 
----
-## Run Backend
----
-
+## ▶️ Run Backend
+```bash
 cd backend
 npm install
 npm run dev
