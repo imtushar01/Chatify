@@ -97,7 +97,16 @@ export const login = async (req, res) => {
 };
 
 export const logout = (_, res) => {
-  res.cookie("jwt", "", { maxAge: 0 });
+  // Clear the cookie with the same attributes used when setting it so the
+  // browser actually removes it. Use sameSite: 'none' and secure only in
+  // production to match generateToken behavior.
+  res.cookie("jwt", "", {
+    maxAge: 0,
+    httpOnly: true,
+    sameSite: "none",
+    secure: ENV.NODE_ENV === "production",
+    path: "/",
+  });
   res.status(200).json({ message: "Logged out successfully" });
 };
 
