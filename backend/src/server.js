@@ -15,8 +15,11 @@ const PORT = ENV.PORT || 3000;
 
 app.use(express.json({ limit: "5mb" })) // req.body
 
+// Allow all origins. Use origin: true so the CORS middleware reflects the request origin
+// while still allowing credentials (cookies). This is equivalent to allowing all
+// domains but still supporting cookies from the requesting origin.
 app.use(cors({
-    origin:ENV.CLIENT_URL, 
+    origin: true,
     credentials: true
 }));
 
