@@ -11,11 +11,14 @@ export const generateToken = (userId, res) => {
         expiresIn: "7d",
     });
 
+    // Set cookie for cross-site usage. For cross-origin requests to include
+    // cookies, SameSite must be 'none'. Browsers require 'secure' when
+    // SameSite is 'none', so enable secure only in production.
     res.cookie("jwt", token, {
         maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true, // secure http connection only
-        sameSite: "strict",
-        secure: ENV.NODE_ENV === "development" ? false:true,
+        httpOnly: true,
+        sameSite: "none",
+        secure: ENV.NODE_ENV === "production",
         path: "/",
     })
 
